@@ -1,0 +1,14 @@
+.backgroundImage {
+    background-image: url(../pics/audi.jpg);
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
+
+/*body{*/
+    /*opacity: 0.5;*/
+    /*filter: alpha(opacity=50);*/
+/*}*/

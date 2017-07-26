@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+{% block herader %}
+    <div class="container" style="text-align: center">
+        <br>
+        <a href="{{ path('all_cars') }}" style="color: white">
+            <button type="submit" class="btn btn-primary">All Cars</button>
+        </a>
+        <a href="{{ path('add_car_form') }}" style="color: white">
+            <button type="submit" class="btn btn-primary">Add Car</button>
+        </a>
+        <a href="{{ path('search_car_form') }}" style="color: white">
+            <button type="submit" class="btn btn-primary">Find Your Car</button>
+        </a>
+        <br>
+    </div>
+    <br>
+{% endblock %}
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Dream Cars{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/background.css') }}"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+</head>
+<body class="backgroundImage">
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

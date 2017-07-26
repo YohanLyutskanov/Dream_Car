@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/text-color.css') }}"/>
+    <div class="container" style="text-align: center">
+        <div class="col-md-4 col-md-offset-4">
+            <div style="background-color:rgba(0,0,0,0.7);">
+                <div class="text-color">
+                    {{ form_start(carForm) }}
+                    {{ form_widget(carForm) }}
+                </div>
+                <button type="submit" class="btn btn-primary" formnovalidate>Add Car</button>
+                {{ form_end(carForm) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

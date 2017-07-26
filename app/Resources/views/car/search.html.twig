@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/text-color.css') }}"/>
+    <div class="container" style="text-align: center">
+        <div class="col-md-4 col-md-offset-4">
+            {% for msg in app.session.flashBag.get('alert') %}
+                <div class="alert alert-danger">
+                    <h1>{{ msg }}</h1>
+                </div>
+            {% endfor %}
+            <div style="background-color:rgba(0,0,0,0.7);">
+                <h1 style="color: red">Find Your Dream Car</h1>
+                <div class="text-color">
+                    {{ form_start(searchForm) }}
+                    {{ form_widget(searchForm) }}
+                </div>
+                <button type="submit" class="btn btn-primary" formnovalidate>Search</button>
+                {{ form_end(searchForm) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
